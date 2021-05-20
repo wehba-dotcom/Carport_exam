@@ -57,6 +57,7 @@ class CarportMapperTest {
         } catch (SQLException ex) {
             System.out.println( "Could not open connection to database: " + ex.getMessage() );
         }
+
     }
 
     @Test
