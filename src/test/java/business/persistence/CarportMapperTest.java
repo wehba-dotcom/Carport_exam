@@ -50,7 +50,7 @@ class CarportMapperTest {
 
             stmt.execute("drop table if exists order" );
             stmt.execute("create table " + TESTDATABASE + ".order LIKE " + DATABASE + ".order;" );
-            stmt.execute("insert into `order` values (1,1,12000,780,600)");
+            stmt.execute("insert into `order` values (1,12000,780,600,true)");
 
 
 
@@ -62,9 +62,9 @@ class CarportMapperTest {
 
     @Test
     void insertOrder() throws UserException {
-        Order order = new Order(71,1,12000,600,600);
+        Order order = new Order(71,1,10000,760.0,600.0,true);
 
-        carportMapper.insertOrder(1,12000,12000,780);
+        carportMapper.insertOrder(1,10000,760.0,600.0,true);
          assertEquals(71,order.getOrder_id());
 
     }

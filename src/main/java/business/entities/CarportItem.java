@@ -1,14 +1,13 @@
 package business.entities;
 
    public class CarportItem {
-
        private int order_id;
        private int item_id;
        private int qauntity;
-      private int  length;
-      private String description;
-      private String info;
-      private int price;
+       private int  length;
+       private String description;
+       private String info;
+       private int price;
 
        public CarportItem(int order_id, int item_id, int qauntity, int length, String description, String info, int price) {
            this.order_id = order_id;

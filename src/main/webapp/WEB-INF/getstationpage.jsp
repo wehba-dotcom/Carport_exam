@@ -3,16 +3,19 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <t:genericpage>
+
     <jsp:attribute name="header">
-        Adminstrator to Carport Side
+        Choose Carport
     </jsp:attribute>
+
     <jsp:attribute name="footer">
+        <c:set var="addHomeLink" value="${true}" scope="request"/>
     </jsp:attribute>
+
     <jsp:body>
-        <h1>Hello ${sessionScope.email} </h1>
-        You are now logged in as a EMPLOYEE of our wonderful site.
-     <p>
-         <a href="${pageContext.request.contextPath}/fc/mangeorders">Here you can se and edit all orders in the system</a>
-     </p>
+      <div>
+          <p>your order station : ${requestScope.answer}</p>
+
+        </div>
     </jsp:body>
 </t:genericpage>

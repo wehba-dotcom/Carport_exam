@@ -24,7 +24,6 @@
     -->
 <header class="d-flex flex-column flex-md-row align-items-center p-3 pb-0 px-md-4 mb-4 bg-white border-bottom shadow-sm">
     <div class="h5 my-0 me-md-auto fw-normal">
-<img src="${pageContext.request.contextPath}/images/head.png" class="img-fluid mb-4 "  style="width:100%;" />
 
         <p style="font-size: larger">
             <jsp:invoke fragment="header"/>
@@ -65,6 +64,7 @@
 </header>
 
 <div id="body" class="container" style="min-height: 20vh;">
+<img src="${pageContext.request.contextPath}/images/head.png" class="img-fluid mb-4 "  />
     <jsp:doBody/>
 </div>
 

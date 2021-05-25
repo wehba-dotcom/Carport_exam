@@ -1,6 +1,7 @@
 package web;
 
 import business.exceptions.UserException;
+import business.persistence.CarportMapper;
 import business.persistence.Database;
 import jdk.jshell.spi.ExecutionControl;
 import web.commands.Command;
@@ -42,7 +43,12 @@ public class FrontController extends HttpServlet
         }
 
         // Initialize whatever global datastructures needed here:
-
+        CarportMapper carportMapper = new CarportMapper(database);
+        try {
+            getServletContext().setAttribute("orderList",carportMapper.getAllorders());
+        } catch (UserException ex) {
+            Logger.getLogger("web").log(Level.SEVERE, ex.getMessage(), ex);
+        }
     }
 
     protected void processRequest(

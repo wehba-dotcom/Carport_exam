@@ -3,9 +3,9 @@ package business.entities;
 
    public class CalcCarport {
 
-   public Double calacPostQ(Double length,Double carportWidth)
+   public Double calacPostQ(Double carportLength,Double carportWidth)
    {
-      Double Postgauntity= ((length/310)+1) * 2;
+      Double Postgauntity= ((carportLength/310)+1) * 2;
        return  Postgauntity;
    }
     public Double calacPostL(Double carportLength,Double carportWidth)
@@ -21,10 +21,6 @@ package business.entities;
       String info = "Stolper nedgraves 90 cm. i jord";
       String description = "Posts 45x95";
       CarportItem posts=new CarportItem(0, 9,postqauntity,postlength,description,info,price);
-
-     /*  bill.addItem(item1);
-      update new item (posts)
-      double price1=qauntity1*item1.getPrice();*/
 
         return posts;
     }
@@ -46,12 +42,6 @@ package business.entities;
         String description="rem 90x45";
         int price = (int) (remqauntity * carportLength/100 * 39);  // Rem koster 49 kr pr. meter
         CarportItem rem = new CarportItem(0, 49, remqauntity,remlength,description,info,price);
-        /* bill.addItem(rem1);
-        update new item (Rem)
-        String rem="";
-        double price2=qauntity2*500;
-        Item  item2=new Item(item_id,rem,"over posts",price2);*/
-
         return rem;
     }
 
@@ -73,10 +63,6 @@ package business.entities;
         String description ="rafters 90x90";
         int price= (int) (rafterqauntity * carportLength / 100 * 39);  // Spær koster 49 kr pr / meter.
         CarportItem rafters=new CarportItem(0, 64, rafterqauntity,rafterlength,description,info,price);
-        /*bill.addItem(rafters1);
-        String refters="";
-        double price3=qauntity3*400;
-        Item  item3=new Item(item_id,refters,"take alot of picese",price3);*/
         return rafters;
     }
 

@@ -13,15 +13,19 @@
     </jsp:attribute>
 
     <jsp:body>
+
+        <div class="text-center">
+            <h2> Please reserve Carports measure.  </h2>
+        </div>
+
         <div calss="row">
         <div class="col-sm-4"></div>
         <div class="col-sm-4">
-            <h2> Here you reserve what you thing about Carport </h2>
 
            <form  action="${pageContext.request.contextPath}/fc/bergen" method="post">
                <div class="form-group">
-               <label for="length">Carport  length:</label>
-               <select id="length" name="length" >
+               <label class="form-check-label" for="length">Carport  length:</label>
+               <select  class="form-control" id="length" name="length" >
                    <option value="length" selected>Choose Length</option>
                    <option value="240">240 cm</option>
                    <option value="270">270 cm</option>
@@ -47,8 +51,8 @@
                   <br><br>
                </div>
                <div calss="form-group">
-                   <label for="width">Carport width:</label>
-               <select id="width" name="width" >
+                   <label class="form-check-label" for="width">Carport width:</label>
+               <select class="form-control" id="width" name="width" >
                    <option value=" width " selected>Choose Width</option>
                    <option value="240">240 cm</option>
                    <option value="270">270 cm</option>
@@ -76,9 +80,7 @@
                        <br><br>
                </div>
                <br> <button type="submit" class="btn btn-primary">Show details</button></br></br>
-               <div>
-                   press here to se your carport draw<a href="${pageContext.request.contextPath}/fc/showsvg">SVG Drwaing</a>
-               </div>
+
            </form>
         </div>
         <div class="col-sm-4"></div>

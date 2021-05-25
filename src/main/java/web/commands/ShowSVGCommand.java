@@ -12,10 +12,8 @@ public class ShowSVGCommand extends CommandUnprotectedPage{
     public ShowSVGCommand(String pageToShow) {
         super(pageToShow);
     }
-
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) throws UserException {
-
 
       SVG svg = new SVG(0,0,"0 0 800 600",100,100);
       svg.addRect(100,40,300,390);

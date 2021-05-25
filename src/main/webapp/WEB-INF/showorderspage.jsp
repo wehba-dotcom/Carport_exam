@@ -10,25 +10,29 @@
     </jsp:attribute>
     <jsp:body>
         <h1>Hello ${sessionScope.email} </h1>
-        Here is a list for all orders in the system
-        <table class="table">
-
-            <thead><th>orderid</th><th>userid</th><th>Price</th><th>length</th><th>width</th></thead>
-            <c:forEach var="order" items="${requestScope.orderList}">
+        <p> Here is a list for all orders in the system</p>
+             <form action="${pageContext.request.contextPath}/fc/mangeorders" method="post">
+        <table class="table table-striped">
+            <thead><th>orderId</th><th>userId</th><th>Price</th><th>length</th><th>width</th><th>station</th><th></th><th></th></thead>
+            <c:forEach var="orderList" items="${requestScope.orderList}">
             <tr>
-                <td>${order.order_id}</td>
-                <td>${order.user_id}</td>
-                <td>${order.price}</td>
-                <td>${order.length}</td>
-                <td>${order.width}</td>
+                <td>${orderList.order_id}</td>
+                <td>${orderList.user_id}</td>
+                <td>${orderList.price}</td>
+                <td>${orderList.length}</td>
+                <td>${orderList.width}</td>
+                <td>${orderList.station}</td>
+                <td><button class="btn btn-danger btn-sm" type="submit" name="delete" value="${orderList.order_id}">Delete</button></td>
+                <td><button class="btn btn-primary btn-sm" type="submit" name="edit" value="${orderList.order_id}">Edit Price</button></td>
             </tr>
+                 </c:forEach>
 
-
-            </c:forEach>
-
-        </table>
-
-
+                  </table>
+        <c:if test="${not empty requestScope.error}">
+            <br/>
+            <p style="color:red; font-size: large">${requestScope.error}</p>
+        </c:if>
+             </form>
 
     </jsp:body>
 </t:genericpage>

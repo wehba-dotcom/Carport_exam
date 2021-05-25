@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="bmi" target="8" />
+      <module name="bmi" target="9" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

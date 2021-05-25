@@ -63,16 +63,14 @@ import javax.servlet.http.HttpSession;
         request.setAttribute("length",(int)Math.round(length));
         request.setAttribute("width",(int)Math.round(width));
         request.setAttribute("bill",bill);
-
         //get all prices of Carport meteriales.
         int price = bill.getTotalPrice();
         // update new order and put it in the data base.
-
-        int ny_order_id =   carportFacade.insertOrder(user_id,price,length,width);
+        int ny_order_id =   carportFacade.insertOrder(user_id,price,length,width,true);
         for (CarportItem item : bill.getCarportItemList() ) {
             carportFacade.insertCarportItem(ny_order_id, item);
           }
-
+        request.setAttribute("OrderID", ny_order_id);
         return pageToShow;
 
     }

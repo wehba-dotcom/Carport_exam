@@ -34,6 +34,8 @@ public abstract class Command
         commands.put("mangeorders",new ShowordersCommand("showorderspage","employee"));
         commands.put("showsvg",new ShowSVGCommand("svgpage"));
         commands.put("myorders",new ShowMyOrdersCommand("showmyorderspage","customer"));
+        commands.put("station",new HandelStationCommand("getstationpage"));
+
 
     }
 
