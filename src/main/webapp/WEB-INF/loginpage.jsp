@@ -25,6 +25,7 @@
                         <input id="password" class="form-control" type="password" name="password" placeholder="sesam">
                     </div>
                 </div>
+
                 <c:if test="${requestScope.error != null }">
                     <p style="color:red">
                             ${requestScope.error}
@@ -37,7 +38,7 @@
                 <button class="btn btn-primary" type="submit" value="Login">Sign in</button>
             </form>
 
-
         </div>
+
     </jsp:body>
 </t:genericpage>

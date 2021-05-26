@@ -21,8 +21,8 @@ import java.util.logging.Logger;
 @WebServlet(name = "FrontController", urlPatterns = {"/fc/*"})
 public class FrontController extends HttpServlet
 {
-    private final static String USER = "wehba";
-    private final static String PASSWORD = "123";
+    private final static String USER = "allord";
+    private final static String PASSWORD = "allordone-1";
     private final static String URL = "jdbc:mysql://localhost:3306/carportdb?serverTimezone=CET";
 
     public static Database database;

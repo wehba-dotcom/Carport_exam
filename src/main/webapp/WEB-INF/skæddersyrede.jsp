@@ -5,7 +5,7 @@
 <t:genericpage>
 
     <jsp:attribute name="header">
-        Tailor-made Carport
+        Tailor-made CARPORT
     </jsp:attribute>
 
     <jsp:attribute name="footer">
@@ -13,19 +13,13 @@
     </jsp:attribute>
 
     <jsp:body>
-
-        <div class="text-center">
-            <h2> Please reserve Carports measure.  </h2>
-        </div>
-
-        <div calss="row">
-        <div class="col-sm-4"></div>
-        <div class="col-sm-4">
-
+          <div class="text-center">
+            <h2> Please reserve carports measure.  </h2>
+          </div>
+        <div class="d-flex justify-content-center">
            <form  action="${pageContext.request.contextPath}/fc/bergen" method="post">
-               <div class="form-group">
-               <label class="form-check-label" for="length">Carport  length:</label>
-               <select  class="form-control" id="length" name="length" >
+               <label class="form-check-label" for="length">Carport length : </label>
+               <select class="form-control-sm"id="length"name="length" >
                    <option value="length" selected>Choose Length</option>
                    <option value="240">240 cm</option>
                    <option value="270">270 cm</option>
@@ -46,13 +40,10 @@
                    <option value="720">720 cm</option>
                    <option value="750">750 cm</option>
                    <option value="780">780 cm</option>
-
                </select>
                   <br><br>
-               </div>
-               <div calss="form-group">
-                   <label class="form-check-label" for="width">Carport width:</label>
-               <select class="form-control" id="width" name="width" >
+               <label class="form-check-label" for="width">Carport width : </label>
+               <select class="form-control-sm" id="width" name="width" >
                    <option value=" width " selected>Choose Width</option>
                    <option value="240">240 cm</option>
                    <option value="270">270 cm</option>
@@ -73,20 +64,14 @@
                    <option value="720">720 cm</option>
                    <option value="750">750 cm</option>
                    <option value="780">780 cm</option>
-
                </select>
-
-
                        <br><br>
-               </div>
-               <br> <button type="submit" class="btn btn-primary">Show details</button></br></br>
-
+                   <br> <button type="submit" class="btn btn-primary">Show details</button></br></br>
            </form>
-        </div>
-        <div class="col-sm-4"></div>
-        </div>
-        <div>
 
+        </div>
+
+           <div>
             <c:if test="${sessionScope.role == 'employee' }">
                 <p style="font-size: larger">This is what you can do,
                     since your are logged in as an employee</p>
@@ -99,7 +84,7 @@
                 <p><a href="fc/customerpage">Customer Page</a>
             </c:if>
 
-        </div>
+           </div>
 
     </jsp:body>
 </t:genericpage>

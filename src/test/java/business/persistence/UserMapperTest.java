@@ -15,8 +15,8 @@ public class UserMapperTest {
 
     private final static String DATABASE = "carportdb";  // Change this to your own database
     private final static String TESTDATABASE = DATABASE + "_test";
-    private final static String USER = "wehba";
-    private final static String PASSWORD = "123";
+    private final static String USER = "allord";
+    private final static String PASSWORD = "allordone-1";
     private final static String URL = "jdbc:mysql://localhost:3306/" + TESTDATABASE + "?serverTimezone=CET&useSSL=false";
 
     private static Database database;

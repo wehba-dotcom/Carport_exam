@@ -63,10 +63,12 @@
     </c:if>
 </header>
 
-<div id="body" class="container" style="min-height: 20vh;">
-<img src="${pageContext.request.contextPath}/images/head.png" class="img-fluid mb-4 "  />
+    <div class="container">
+
+<img class="img-responsive" src="${pageContext.request.contextPath}/images/head1.png" alt="Chania" width="1150" height="155">
+    </div>
     <jsp:doBody/>
-</div>
+
 
 <!-- Footer -->
 <div class="container">

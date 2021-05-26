@@ -18,8 +18,8 @@
            </p>
              </div>
 
-           <table class="table table-striped">
-               <thead><th>Description </th><th>length</th><th>Qauntity</th><th>informaion</th><th></th><th></th></thead>
+           <table class="table table-bordered table-dark">
+               <thead><th>Description </th><th>length</th><th>Qauntity</th><th>informaion</th></thead>
                <c:forEach var="carportItem" items="${requestScope.bill.carportItemList}">
                    <tr>
                        <td>${carportItem.description}</td>

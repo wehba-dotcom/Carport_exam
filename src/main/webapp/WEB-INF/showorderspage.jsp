@@ -10,9 +10,11 @@
     </jsp:attribute>
     <jsp:body>
         <h1>Hello ${sessionScope.email} </h1>
-        <p> Here is a list for all orders in the system</p>
+        <div class="text-center">
+        <h2> Here is a list for all orders in the system</h2>
+        </div>
              <form action="${pageContext.request.contextPath}/fc/mangeorders" method="post">
-        <table class="table table-striped">
+        <table class="table table-bordered table-dark">
             <thead><th>orderId</th><th>userId</th><th>Price</th><th>length</th><th>width</th><th>station</th><th></th><th></th></thead>
             <c:forEach var="orderList" items="${requestScope.orderList}">
             <tr>

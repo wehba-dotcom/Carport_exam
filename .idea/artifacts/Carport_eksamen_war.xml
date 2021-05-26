@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Carport-eksamen:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Carport-eksamen</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="carport-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Carport-eksamen:war exploded" />
+    </root>
+  </artifact>
+</component>
