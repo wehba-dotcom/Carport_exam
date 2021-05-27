@@ -1,7 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <t:genericpage>
     <jsp:attribute name="header">
       A List og all Orders
@@ -28,13 +27,11 @@
                 <td><button class="btn btn-primary btn-sm" type="submit" name="edit" value="${orderList.order_id}">Edit Price</button></td>
             </tr>
                  </c:forEach>
-
                   </table>
         <c:if test="${not empty requestScope.error}">
             <br/>
             <p style="color:red; font-size: large">${requestScope.error}</p>
         </c:if>
              </form>
-
     </jsp:body>
 </t:genericpage>

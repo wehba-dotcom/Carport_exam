@@ -1,11 +1,8 @@
 package business.entities;
-
 import java.util.ArrayList;
 import java.util.List;
-
   public class BillOfMateirial {
     List<CarportItem> carportItemList= new ArrayList<>();
-
     public int getTotalPrice()
     {
         int total = 0;
@@ -18,7 +15,6 @@ import java.util.List;
      {
          carportItemList.add(item);
      }
-
       public List<CarportItem> getCarportItemList() {
           return carportItemList;
       }

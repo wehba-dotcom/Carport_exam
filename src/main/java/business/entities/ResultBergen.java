@@ -8,7 +8,4 @@ public class ResultBergen {
         this.length = length ;
         this.quantity = quantity;
     }
-
-
-
 }

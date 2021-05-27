@@ -62,14 +62,10 @@
     </div>
     </c:if>
 </header>
-
     <div class="container">
-
 <img class="img-responsive" src="${pageContext.request.contextPath}/images/head1.png" alt="Chania" width="1150" height="155">
     </div>
     <jsp:doBody/>
-
-
 <!-- Footer -->
 <div class="container">
     <br>
@@ -77,6 +73,5 @@
     <br>
     <jsp:invoke fragment="footer"/>
 </div>
-
 </body>
 </html>

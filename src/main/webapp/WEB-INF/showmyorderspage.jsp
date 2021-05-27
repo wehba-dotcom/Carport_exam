@@ -14,7 +14,6 @@
       <h2>  Here is a list for all orders in the system</h2>
         </div>
         <table class="table table-bordered table-dark">
-
             <thead><th>Orderid</th><th>Userid</th><th>Price</th><th>length</th><th>width</th></thead>
             <c:forEach var="order" items="${requestScope.orderslist}">
             <tr>
@@ -24,10 +23,7 @@
                 <td>${order.length}</td>
                 <td>${order.width}</td>
             </tr>
-
-
             </c:forEach>
-
         </table>
 
 

@@ -1,8 +1,5 @@
 package business.entities;
-
-
    public class CalcCarport {
-
    public Double calacPostQ(Double carportLength,Double carportWidth)
    {
       Double Postgauntity= ((carportLength/310)+1) * 2;
@@ -21,7 +18,6 @@ package business.entities;
       String info = "Stolper nedgraves 90 cm. i jord";
       String description = "Posts 45x95";
       CarportItem posts=new CarportItem(0, 9,postqauntity,postlength,description,info,price);
-
         return posts;
     }
     public Double calacRemQ(Double carportLength,Double carportWidth)
@@ -34,7 +30,6 @@ package business.entities;
     }
     public CarportItem getRem(Double carportLength,Double carportWidth)
     {
-
         /*`Clac Remerne*/
         int remqauntity = (int)Math.round(calacRemQ(carportLength,carportWidth));
         int remlength = (int)Math.round(calacRemL(carportLength,carportWidth));
@@ -65,6 +60,4 @@ package business.entities;
         CarportItem rafters=new CarportItem(0, 64, rafterqauntity,rafterlength,description,info,price);
         return rafters;
     }
-
-
 }

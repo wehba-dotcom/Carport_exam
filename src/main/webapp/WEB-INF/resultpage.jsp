@@ -17,7 +17,6 @@
                You have reserved the  carport with width : ${requestScope.width} cm
            </p>
              </div>
-
            <table class="table table-bordered table-dark">
                <thead><th>Description </th><th>length</th><th>Qauntity</th><th>informaion</th></thead>
                <c:forEach var="carportItem" items="${requestScope.bill.carportItemList}">
@@ -28,10 +27,8 @@
                        <td>${carportItem.info}</td>
                    </tr>
                </c:forEach>
-
            </table
                <p>Total price : ${requestScope.bill.getTotalPrice()}</p>
-
             <div>
                 press here to se your carport draw<a href="${pageContext.request.contextPath}/fc/showsvg">SVG Drwaing</a>
             </div>

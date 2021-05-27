@@ -1,15 +1,11 @@
 package business.services;
-
 import business.entities.CarportItem;
 import business.entities.Order;
 import business.exceptions.UserException;
 import business.persistence.CarportMapper;
 import business.persistence.Database;
-
 import java.util.List;
-
 public class CarportFacade {
-
    private CarportMapper carportMapper;
    public CarportFacade(Database database) throws UserException
    {
@@ -25,7 +21,6 @@ public class CarportFacade {
    {
      return   carportMapper.getAllorders();
    }
-
     public List<Order> getAllordersById(int userid) throws UserException
     {
         return carportMapper.getAllordersById(userid);
@@ -42,7 +37,6 @@ public class CarportFacade {
     {
         return carportMapper.getOrderById(order_id);
     }
-
     public int updateOrder(int order_id,int price)throws UserException
     {
         return carportMapper.updateOrder( order_id,price);

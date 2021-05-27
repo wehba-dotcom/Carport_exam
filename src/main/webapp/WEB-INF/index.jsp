@@ -30,7 +30,6 @@
                     padding: 32px;
                 }
 
-                /* Create two equal columns that floats next to each other */
                 .column {
                     float: left;
                     width: 50%;
@@ -40,8 +39,6 @@
                 .column img {
                     margin-top: 12px;
                 }
-
-                /* Clear floats after the columns */
                 .row:after {
                     content: "";
                     display: table;
@@ -73,8 +70,6 @@
                     are logged in as a customer</p>
                 <p><a href="fc/customerpage">Customer Page</a>
             </c:if>
-
         </div>
-
     </jsp:body>
 </t:genericpage>

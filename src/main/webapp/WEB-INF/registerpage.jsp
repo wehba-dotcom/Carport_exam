@@ -52,7 +52,6 @@
                         </div>
                     </div>
                 <input class="btn btn-primary" type="submit" type="submit" value="Submit">
-
             </form>
                 <c:if test="${requestScope.error != null }">
                 <p style="color:red">

@@ -19,7 +19,6 @@
                 <input id="price" class="form-control" type="text" name="price" value="${requestScope.orderItem.price}">
                 <button class="btn btn-primary btn-sm mt-2" type="submit" name="update" >Update Price</button>
             </div>
-
         </div>
         <c:if test="${not empty requestScope.error}">
             <br/>

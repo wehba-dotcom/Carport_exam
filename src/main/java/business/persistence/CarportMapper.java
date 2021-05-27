@@ -154,13 +154,11 @@ public class CarportMapper {
 
             try (PreparedStatement ps = connection.prepareStatement(sql))
             {
-
                 ps.setInt(1,price);
                 ps.setInt(2,order_id);
 
                 int rowsinserted = ps.executeUpdate();
                 return rowsinserted;
-
             }
             catch (SQLException ex)
             {
@@ -174,20 +172,17 @@ public class CarportMapper {
     }
     public int updateOrderStation(int order_id,boolean station)throws UserException
     {
-
         try (Connection connection = database.connect())
         {
             String sql = "UPDATE  carportdb.`order` SET station =?  WHERE order_id = ?";
 
             try (PreparedStatement ps = connection.prepareStatement(sql))
             {
-
                 ps.setBoolean(1,station);
                 ps.setInt(2,order_id);
 
                 int rowsinserted = ps.executeUpdate();
                 return rowsinserted;
-
             }
             catch (SQLException ex)
             {

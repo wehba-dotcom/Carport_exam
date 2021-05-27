@@ -1,14 +1,10 @@
 package web.commands;
-
 import business.entities.*;
 import business.exceptions.UserException;
 import business.services.CarportFacade;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-
     public class ResultCommand extends CommandUnprotectedPage {
     private CarportFacade carportFacade;
     public ResultCommand(String pageToShow) throws UserException {
@@ -31,7 +27,6 @@ import javax.servlet.http.HttpSession;
          throw new UserException("You must login first !");
      }
 
-
      try {
       width = Double.parseDouble(request.getParameter("width"));
       length = Double.parseDouble(request.getParameter("length"));
@@ -40,25 +35,17 @@ import javax.servlet.http.HttpSession;
      {
        throw new UserException("you must test to numbers in the forms!");
      }
-
         //update Posts
         BillOfMateirial bill = new BillOfMateirial();
         CalcCarport calcCarport = new CalcCarport();
-
         CarportItem posts = calcCarport.getPosts(length,width);
         bill.addItem(posts);
-
-
        //Update remene.
        CarportItem rem = calcCarport.getRem(length,width);
        bill.addItem(rem);
-
         //Update Referts
        CarportItem referts= calcCarport.getRafters(length,width);
        bill.addItem(referts);
-
-
-
         //sent responde to jsp side
         request.setAttribute("length",(int)Math.round(length));
         request.setAttribute("width",(int)Math.round(width));
@@ -72,6 +59,5 @@ import javax.servlet.http.HttpSession;
           }
         request.setAttribute("OrderID", ny_order_id);
         return pageToShow;
-
     }
 }
