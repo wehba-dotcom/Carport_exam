@@ -18,7 +18,6 @@ public class UserMapperTest {
     private final static String USER = "allord";
     private final static String PASSWORD = "allordone-1";
     private final static String URL = "jdbc:mysql://localhost:3306/" + TESTDATABASE + "?serverTimezone=CET&useSSL=false";
-
     private static Database database;
     private static UserMapper userMapper;
 
